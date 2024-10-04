@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Du clos des renards - Bienvenue</title>
+<script src="js/fonction.js" type="text/javascript"></script>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="./js/nicEdit.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<link rel="stylesheet" type="text/css" href="css/menu_admin.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<style>
+@import url("./css/main.css");
+@import url("./css/menu.css");
+body
+{
+background-image:url(./img.php?id=2266&mode=normal);
+	}
+</style><script>
+var nic;
+bkLib.onDomLoaded(function() 
+{ 
+		nic = new nicEditor({fullPanel : true});
+});
+function modify()
+{
+	nic.setPanel('myNicPanel'); 
+	nic.addInstance('presentation');
+	nic.addInstance('elevage');
+}
+function enregistrer()
+{
+	$.ajax({
+		type: "POST",
+		url: "saveContent.php",
+		//data: { presentation: document.getElementById('presentation').innerHTML, elevage: document.getElementById('elevage').innerHTML, info:'clear' },
+		data: "presentation="+document.getElementById('presentation').innerHTML+"&elevage="+document.getElementById('elevage').innerHTML,
+		success: function(msg){
+		alert( "Résultat: " + msg );}
+	});
+
+	nic.removePanel('myNicPanel');
+	nic.removeInstance('presentation');
+	nic.removeInstance('elevage');
+	nic.removeInstance('myNICPanel');
+}
+</script>
+<!-- Faire un fichier .js et mettre entre les balises head : -->
+<script type="text/javascript" src="menu.js"></script>
+
+<!-- Ou copier le code ci-dessus dans les balises : -->
+<script type="text/javascript">
+<!--METTRE LE JAVASCRIPT EN COMMENTAIRES POUR QUE LE SCRIPT SOIT VALIDE W3C -->
+</script>
+<!--  Et mettre tout entre les balises head. -->
+<style>
+#titre_page {
+	background-image:url(images/titre_album.png);
+}
+div.conteneur #lastNews {
+	position:relative;
+	margin-bottom:10px;
+	background-color:#FC6;
+	min-height:50px;
+	padding:0px;
+	border:1px #000 dotted;
+	font-size:1em;
+	text-align:justify;
+	column-rule:1px dotted #000;
+}
+#lastNews img
+{
+	border:1px #666666 solid;
+	margin-top:4px;
+	margin-left:4px;
+}
+#lastNews  div.texte
+{
+	position:relative;
+	float:right;
+	width:800px;
+	margin-top:5px;
+	color:#000000;
+}
+#lastNews div.date
+{
+	position:absolute;
+	top:5px;
+	right:10px;
+	color:#039;
+	font-size:12px;
+}
+div.conteneur #presentation {
+	position:relative;
+	/*width: 100%;*/
+	margin-bottom:10px;
+	background-color:#FFFFFF;
+	padding:5px;
+	border:1px #000 dotted;
+	font-size:12px;
+	text-align:justify;
+	-moz-column-count: 2;
+	-moz-column-gap: 21px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 21px;
+	column-count: 2;
+	column-gap: 21px;
+	/* width style color */
+	-moz-column-rule:1px dotted #000; /* Firefox */
+	-webkit-column-rule:1px dotted #000; /* Safari and Chrome */
+	column-rule:1px dotted #000;
+}
+div.conteneur #elevage {
+	position:relative;
+	background-color:#FFFFFF;
+	padding:5px;
+	font-size:12px;
+	border:1px #000 dotted;
+	-moz-column-count: 3;
+	-moz-column-gap: 21px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 21px;
+	column-count: 3;
+	column-gap: 21px;
+	/* width style color */
+	-moz-column-rule:1px dotted #000; /* Firefox */
+	-webkit-column-rule:1px dotted #000; /* Safari and Chrome */
+	column-rule:1px dotted #000;
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div id="myNICPanel" style="width: 525px;"></div>
+  <header> 
+	<div id="language_bar">
+    <ul>
+    	<!--<li class="language_btn" id="ln_fr"></li>
+        <li <class="language_btn" id="ln_en"></li>-->
+    </ul>
+    </div>
+    <!-- Start WOWSlider.com BODY section -->
+    <div id="wowslider-container1">
+      <div class="ws_images">
+      
+        <ul>
+ 	<li><img src="./img.php?id=862&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1914&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1913&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1912&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1911&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1541&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1540&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1539&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1538&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=867&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=866&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=863&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				<li><img src="./img.php?id=1915&mode=normal" height="200" width="950" alt="05" title="05" id=""/></li>
+				        </ul>
+      </div>
+      <div class="ws_shadow"></div>
+    </div>
+    <script type="text/javascript" src="engine1/wowslider.js"></script> 
+    <script type="text/javascript" src="engine1/script.js"></script> 
+    <!-- End WOWSlider.com BODY section -->
+    
+    <div id="titre_page"></div>
+    <div id="logo_principal"></div>
+    <div class="socialNetwork">
+      <a href="https://www.facebook.com/Du-clos-des-renards-1938418832859952/">
+        <img src="./images/retrouvez-nous-sur-facebook-menu.jpg" alt="Rejoignez-nous sur facebook" height="30"/>
+      </a>
+    </div>
+    <nav class="menuPrincipal">
+      <ul id="menu"><li id="active"><a href="index.php">Accueil</a></li><li><a href="#"  class="sousmenu">&nbsp;&nbsp;&nbsp;Nos chiens</a><ul><li><a href="lices.php">Lices</a></li><li><a href="etalons.php">Etalons</a></li><li><a href="retraite.php">A la retraite</a></li><li><a href="memoire.php">En mémoire</a></li></ul></li><li><a href="saillies.php">Saillies</a></li><li><a href="naissances.php">Naissances</a></li><li><a href="album.php">Photos</a></li><li><a href="education.php">Education</a></li><li><a href="liens.php">Liens</a></li><li><a href="contact.php">Contact</a></li><li><a href="news.php">News</a></li></ul>    </nav>
+</header>  <div class="conteneur">
+	  <div class="newsContainer">
+		  <a href="news.php">
+			  <div id="lastNews">
+				  <div class="texte"><h3>Les chiots de Rozetta sont nés</h3>Toute la petite famille se porte bien. 4...</span>
+		<div class='date'>Date :08-04-2023</div>
+		</div>			  </div>
+		  </a>
+	  </div>
+
+    <div id="presentation">
+      <h1>Présentation de la race.</h1>
+      <p> Un auxiliaire « passe-partout » par excellence. </p>
+      <p> Ses origines : elles se révèlent très obscures, il a fallu attendre le début du 20 ème siècle pour que soit reconnu le standard de la race.
+        Au 19 ème siècle dans la région du Münsterland (Westphalie), il était beaucoup utilisé dans les fermes comme chien à tout faire : chien de garde, chien de troupeaux, chien de chasse, … </p>
+      <p> Sa polyvalence : le petit Munsterlander exprime sa passion débordante pour la chasse sur tous les terrains. Son travail séduit, que vous l’emmeniez en plaine, au bois ou à l’eau. Il a une quête proche du chasseur ce qui permet une chasse sous le fusil. </p>
+      <p> Ses qualités de nez lui permettent de marquer fermement l’arrêt, de pister et de mener à voix sur le gibier à poil, il est champion pour débusquer le canard dans les marais mais il sait aussi traquer le chevreuil, le cervidé, faire ferme sur la bête noire et il se montre grand broussailleur.
+        Le petit Munsterlander s’avère naturellement doué pour le rapport (sur terre ou à l’eau) et ses aptitudes au pistage font qu’il peut aussi être utilisé pour la recherche au sang. </p>
+      <p> Son tempérament
+        Le petit épagneul de Munster se montre très sociable avec ses congénères, il est attaché à son maître, réceptif et donc capable d’apprendre rapidement.
+        Son caractère doux, équilibré et souple fait de lui, en plus d’un excellent chien d’arrêt polyvalent, un super chien de famille
+        Taille : hauteur au garrot : </p>
+      <p> Mâle 54 cm
+        Femelle 52 cm
+        Avec une tolérance de plus ou moins 2 cm
+        Poids : de 20 à 25 kg
+        Couleurs : marron et blanc, le marron formant de grandes taches et des mouchetures ou des truitures dans le blanc. </p>
+      <p> Les marques fauves sont autorisées au museau, à l’œil et autour de l’anus. </p>
+      <p> Source : « L’officiel des chiens de chasse, n° 34, Novembre/décembre 2007. <br>
+      <img src="images/chien.png" height="256" width="300">    </div>
+    </p>
+    <div id="elevage">
+      <h1>Notre famille</h1>
+      <p> En 2003, nous faisions connaissance d'un chasseur (devenu un ami) passionné de chiens de chasse tout comme nous et nous lui devons notre première rencontre avec le Petit Munsterlander. </p>
+      <p> En effet, grand amateur de chien d'origine germanique, notre ami a découvert la race 10 ans plus tôt lors d'une de ses visites en Allemagne d'où il a ramené à l'époque un chiot appelé Tania. </p>
+      <p> Au cours de cette décennie, deux autres petits Munster étaient venus rejoindre la première, il en possédait donc trois lorsque nous nous sommes connus. Nous fûmes d'abord séduits par l'allure harmonieuse et élégante de ce petit épagneul et vint ensuite le coup de foudre quand nous avons eu le bonheur de les voir évoluer sur biotopes et gibiers divers. </p>
+      <p> Un véritable chien de chasse « pratique ». </p>
+      <p> Un an plus tard nous faisions l'acquisition chez cet ami, des nos deux premiers Munsterlanders : </p>
+      <p> Django, un mâle et Douna une femelle (elle est malheureusement décédée à 7 mois d'un lymphosarcome galopant, pathologie rarissime et non génétique). </p>
+      <p> Notre Django, lui, a superbement évolué, c'est un « pro » du canard et du sanglier, il a d'énormes qualités mais sa trop grande taille (60 cm au garrot) fait que nous ne voulons pas l'utiliser comme reproducteur (taille non conforme au standard de la race). </p>
+      <p> Par la suite, amoureux passionnés de la race, trois autres petits munsters sont venus rejoindre la cellule familiale : Argo-Airelle et Casia.
+        Depuis cette année 2004, nous vivons de fabuleux moments cynophiles et cynégétiques en compagnie de nos chiens et c'est d'ailleurs au cours de l'un d'entre eux que nous avons eu la chance et le plaisir de rencontrer Mlle Agnès de France (vice présidente du Club Français des Epagneuls de Munster et du Langhaar-propriétaire de l'élevage « de Wacourt »à Crécy en Ponthieux-pionnière dans l'élevage du petit Munster en France avec Mona, première chienne importée d'Allemagne en 1976)
+        Nous dirons que Mlle de France occupe un rôle principal dans la mise en route de notre élevage et nous l'en remercions vivement. </p>
+      <h2>A savoir :</h2>
+      <p style="font-style:italic; color:#666;"> Nos chiots naissent et sont élevés au sein de la famille, nous mettons tout en œuvre pour pouvoir proposer des chiots sociables, équilibrés et avec un instinct de chasse bien éveillé (ils sont mis en contact avec de nombreuses personnes différentes, avec d'autres chiens de tailles et de races différentes, sont manipulés notamment par les enfants, sont mis en présence de gibier à plumes et à poils, sont soumis à bruits divers (aspirateur, tondeuse à gazon, …) et progressivement au coup de feu et au contact avec l'eau.
+        Par la suite, à vous d'exploiter leur potentiel. </p>
+      <p style="font-style:italic; color:#0033CC;"> Nous sommes agréés  Elevage occasionnel et nous nous limitons à maximum deux portées par an. Numéro d’agrément : HK01500398
+      </p>     </div>
+  </div>
+  <footer><a href='condition.php'>Condition générale d'utilisation</a> | Vous êtes  le 760259 ème visiteurs.  <a href='admin.php'>_</a></footer></div>
+
+</body>
+</html>
